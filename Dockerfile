@@ -14,5 +14,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # COPY . /var/www nao precisa pq esta sendo vinculado um volume no docker-compose ja
 RUN ln -s public html
 
+RUN chown -R www-data:www-data /var/www
+
 EXPOSE 9000
 ENTRYPOINT ["php-fpm"]
