@@ -19,3 +19,7 @@ steps:
 - id: "Rodando Migrations"
   name: "gcr.io/cloud-builders/docker"
   args: ["exec", "-t", "app", "php", "artisan", "migrate"]
+
+- id: "Rodando testes unitários"
+  name: "grc.io/cloud-builders/docker"
+  args: ["exec", "-t", "app", "php", "phpunit", "-c", "/var/www/phpunit.xml"]
