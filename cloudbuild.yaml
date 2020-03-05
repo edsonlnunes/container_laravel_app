@@ -22,4 +22,4 @@ steps:
 
 - id: "Rodando testes unitários"
   name: "grc.io/cloud-builders/docker"
-  args: ["exec", "-t", "app", "php", "phpunit", "-c", "/var/www/phpunit.xml"]
+  args: ["exec", "-t", "app", "php", "/var/www/vendor/bin/phpunit", "-c", "/var/www/phpunit.xml"]
